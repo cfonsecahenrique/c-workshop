@@ -45,9 +45,8 @@ int isInList(Student *head, char name[MAXNAMESIZE]) {
     /* Returns 1 if the a student (by name) is in
     the llist headed by *head, 0 otherwise.*/
     while(head) {
-        if(strcmp(head->name, name)==0) {
+        if(strcmp(head->name, name)==0)
             return 1;
-        }
         head = head->next;
     }
     return 0;
@@ -126,7 +125,7 @@ Student* removeStudent(Student* head, char name[MAXNAMESIZE]) {
 }
 
 int findNstudents(Student* head) {
-    /* Calculates how many elements exist in the llist */
+    /* Counts how many elements exist in the llist */
     int count = 0;
     while(head) {
         count++;
